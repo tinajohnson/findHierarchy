@@ -1,0 +1,38 @@
+<html ng-app="hierarchyTree">
+    <title>
+      Hierarchy Tree
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="lib/angular.min.js" type="text/javascript"></script>
+    <script src="lib/angular-route.js" type="text/javascript"></script>
+    <script src="lib/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <!--<script src="js/controllers/mainController.js" type="text/javascript"></script>-->
+    <script src="lib/bootstrap.js" type="text/javascript"></script>
+    <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <body ng-controller="mainController">
+    <!--<tree family="familyTree"></tree>-->
+    <ul class="tree">
+                <a href="#" ng-click="getTree(familyTree[0].id)">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{familyTree[0].name}}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{rootWife.name}}
+                        </div>
+                    </div>
+                </a>
+
+                <tree family="sons"></tree>
+                <tree family="daughters"></tree>
+    </ul>
+
+
+  </body>
+</html>
