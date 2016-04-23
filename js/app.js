@@ -60,11 +60,11 @@ app.directive("tree", function($compile) {
                     '<div class="panel panel-default">' +
                         '<div class="panel-heading">' +
                             '<h3 class="panel-title">'+
-                                '{{data.name}}' +
+                                '{{data.name}}' + '</br>b. {{data.dob}}' +
                             '</h3>' +
                         '</div>' +
                         '<div class="panel-body">' +
-                            '{{data.spouse.name}}' +
+                            '{{data.spouse.name}}' +'</br>b. {{data.spouse.dob}}' +
                         '</div>' +
                     '</div>' +
                     '<tree family="sons"></tree>' +

@@ -21,10 +21,11 @@
                 <a href="#" ng-click="getTree(familyTree[0].id)">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">{{familyTree[0].name}}</h3>
+                            <h3 class="panel-title">{{familyTree[0].name}}</h3></br>
+                            <h5>b. {{familyTree[0].dob}}</h5>
                         </div>
                         <div class="panel-body">
-                            {{rootWife.name}}
+                            {{rootWife.name}}</br>b. {{rootWife.dob}}
                         </div>
                     </div>
                 </a>
@@ -32,7 +33,5 @@
                 <tree family="sons"></tree>
                 <tree family="daughters"></tree>
     </ul>
-
-
   </body>
 </html>
