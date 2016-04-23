@@ -54,7 +54,7 @@ app.directive("tree", function($compile) {
         restrict: "E",
         scope: {family: '='},
         template:
-        '<ul '+
+        '<ul>'+
             '<li>' +
                 '<a href="#" ng-repeat="data in family" ng-controller="mainController" ng-click="getTree(data.id)">' +
                     '<div class="panel panel-default">' +
@@ -67,11 +67,8 @@ app.directive("tree", function($compile) {
                             '{{data.spouse.name}}' +
                         '</div>' +
                     '</div>' +
-        '<ul>' +
-        '<li>' +
                     '<tree family="sons"></tree>' +
-        '</li>' +
-        '</ul>'+
+
                     '<tree family="daughters"></tree>' +
                 '</a>' +
             '</li>' +
