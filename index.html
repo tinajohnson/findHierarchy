@@ -2,34 +2,35 @@
     <title>
       Hierarchy Tree
     </title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script src="lib/angular.min.js" type="text/javascript"></script>
-    <script src="lib/angular-route.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
-    <script src="js/controllers/mainController.js" type="text/javascript"></script>
-    <script src="lib/bootstrap.js" type="text/javascript"></script>
-    <script src="lib/bootstrap.min.js" type="text/javascript"></script>
-  </head>
-  <body ng-controller="mainController">
-    <ul class="tree">
-                <a href="#" ng-click="getTree(familyTree[0].id)" ng-keydown="keyPressed()">
-                    <div class="panel panel-default" id="start" tabindex="0">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">{{familyTree[0].name}}</h3></br>
-                            <h5>b. {{familyTree[0].dob}}</h5>
-                        </div>
-                        <div class="panel-body">
-                            {{rootWife.name}}</br>b. {{rootWife.dob}}
-                        </div>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="lib/angular.min.js" type="text/javascript"></script>
+        <script src="lib/angular-route.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/controllers/mainController.js" type="text/javascript"></script>
+        <script src="lib/bootstrap.js" type="text/javascript"></script>
+        <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+    </head>
+    <body ng-controller="mainController">
+        <ul class="tree">
+            <a href="#" ng-click="getTree(familyTree[0].id)">
+                <div class="panel panel-default" id="start" tabindex="0">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{familyTree[0].name}}</h3></br>
+                        <h5>b. {{familyTree[0].dob}}</h5>
                     </div>
-                </a>
+                    <div class="panel-body">
+                        {{rootWife.name}}</br>b. {{rootWife.dob}}
+                    </div>
+                </div>
+            </a>
 
-                <tree family="sons"></tree>
-                <tree family="daughters"></tree>
-    </ul>
-  </body>
+            <tree family="sons"></tree>
+            <tree family="daughters"></tree>
+        </ul>
+    </body>
 </html>

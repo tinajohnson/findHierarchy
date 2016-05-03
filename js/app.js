@@ -38,5 +38,3 @@ app.directive("tree", function($compile) {
         }
     };
 });
-
-
