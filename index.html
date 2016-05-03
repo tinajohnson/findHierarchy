@@ -9,17 +9,15 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="lib/angular.min.js" type="text/javascript"></script>
     <script src="lib/angular-route.js" type="text/javascript"></script>
-    <script src="lib/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
-    <!--<script src="js/controllers/mainController.js" type="text/javascript"></script>-->
+    <script src="js/controllers/mainController.js" type="text/javascript"></script>
     <script src="lib/bootstrap.js" type="text/javascript"></script>
     <script src="lib/bootstrap.min.js" type="text/javascript"></script>
   </head>
   <body ng-controller="mainController">
-    <!--<tree family="familyTree"></tree>-->
     <ul class="tree">
-                <a href="#" ng-click="getTree(familyTree[0].id)">
-                    <div class="panel panel-default">
+                <a href="#" ng-click="getTree(familyTree[0].id)" ng-keydown="keyPressed()">
+                    <div class="panel panel-default" id="start" tabindex="0">
                         <div class="panel-heading">
                             <h3 class="panel-title">{{familyTree[0].name}}</h3></br>
                             <h5>b. {{familyTree[0].dob}}</h5>
